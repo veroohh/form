@@ -1,9 +1,9 @@
 <html lang="en">
-    <head>
-        <meta charset="utf8" />
-        <title>Form Demo</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-    </head>
+<head>
+    <meta charset="utf8" />
+    <title>Cloudflare workers community survey</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
     <body>
         <form method="POST" action="/api/submit">
             <div class="input">
@@ -17,40 +17,67 @@
             </div>
 
             <div class="input">
-                <label for="referers">How did you hear about us?</label>
+                <label for="referers">Which language do you use the most?</label>
                 <select id="referers" name="referers">
                     <option hidden disabled selected value></option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Twitter">Twitter</option>
-                    <option value="Google">Google</option>
-                    <option value="Bing">Bing</option>
-                    <option value="Friends">Friends</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Rust">Rust</option>
+                    <option value="C">C</option>
+                    <option value="Python">Python</option>
                 </select>
             </div>
 
             <div class="checklist">
-                <label>What are your favorite movies?</label>
+                <label>What kind of community activities do you prefer?</label>
                 <ul>
                     <li>
-                        <input id="m1" type="checkbox" name="movies" value="Space Jam" />
-                        <label for="m1">Space Jam</label>
+                        <input id="m1" type="checkbox" name="activities" value="Virtual Events" />
+                        <label for="m1">Onsite Events</label>
                     </li>
                     <li>
-                        <input id="m2" type="checkbox" name="movies" value="Little Rascals" />
-                        <label for="m2">Little Rascals</label>
+                        <input id="m2" type="checkbox" name="activities" value="Onsite Events" />
+                        <label for="m2">Webinars</label>
                     </li>
                     <li>
-                        <input id="m3" type="checkbox" name="movies" value="Frozen" />
-                        <label for="m3">Frozen</label>
+                        <input id="m3" type="checkbox" name="activities" value="Workshops" />
+                        <label for="m3">Workshops</label>
                     </li>
                     <li>
-                        <input id="m4" type="checkbox" name="movies" value="Home Alone" />
-                        <label for="m4">Home Alone</label>
+                        <input id="m4" type="checkbox" name="activities" value="Code Jams" />
+                        <label for="m4">Code Jams</label>
                     </li>
                 </ul>
             </div>
 
-            <button type="submit">Submit</button>
+            <div class="checklist">
+                <label>What are the top three aspects of the Cloudflare workers documentation that we should prioritise?</label>
+                <ul>
+                    <li>
+                        <input id="a1" type="checkbox" name="aspects" value="Tutorials" />
+                        <label for="a1">Tutorials</label>
+                    </li>
+                    <li>
+                        <input id="a3" type="checkbox" name="aspects" value="Sample code" />
+                        <label for="a3">Sample code</label>
+                    </li>
+                    <li>
+                        <input id="a2" type="checkbox" name="aspects" value="APIs" />
+                        <label for="a2">Runtime APIs reference completeness</label>
+                    </li>
+                    <li>
+                        <input id="a4" type="checkbox" name="aspects" value="Something else" />
+                        <label for="a4">Something else, not on this list</label>
+                    </li>
+                </ul>
+            </div>
+
+            <label for="like">What do you like the most about Cloudflare workers?</label>
+                <textarea id="like" name="like" rows="5" cols="33"></textarea>
+
+                <label for="dislike">What do you dislike the most about Cloudflare workers?></label>
+                    <textarea id="dislike" name="like" rows="5" cols="33"></textarea>
+
+                    <button type="submit">Submit</button>
         </form>
     </body>
 </html>
